@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulatore di volo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="plane" id="plane">✈ <div class="trail"></div></div>
+  <h1>Mini simulatore di volo</h1>
+  <p>Inserisci i dati e controlla lo stato del volo.</p>
+</header>
+
+<nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="forze.html">Forze del volo</a>
+  <a href="formule.html">Formule</a>
+  <a href="simulatore.html">Simulatore</a>
+  <a href="curiosita.html">Curiosità</a>
+</nav>
+
+<main class="container">
+
+  <section class="section">
+    <h2>Come funziona?</h2>
+    <p>
+      Il simulatore usa alcune regole semplificate per valutare altitudine,
+      velocità, vento e carburante.
+    </p>
+
+    <p>
+      Il risultato può essere:
+      <strong>OK</strong>, <strong>ATTENZIONE</strong> oppure <strong>CRITICO</strong>.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Inserisci i dati</h2>
+
+    <div class="form-grid">
+      <label>
+        Altitudine (m)
+        <input type="number" id="altitudine" placeholder="Esempio: 800">
+      </label>
+
+      <label>
+        Velocità (km/h)
+        <input type="number" id="velocita" placeholder="Esempio: 250">
+      </label>
+
+      <label>
+        Vento (km/h)
+        <input type="number" id="vento" placeholder="Esempio: 30">
+      </label>
+
+      <label>
+        Carburante (L)
+        <input type="number" id="carburante" placeholder="Esempio: 200">
+      </label>
+
+      <label>
+        Distanza dalla destinazione (km)
+        <input type="number" id="distanza" placeholder="Esempio: 300">
+      </label>
+    </div>
+
+ <button class="button" onclick="analizzaVolo()">Analizza volo</button>
+
+    <div id="risultato" class="dashboard">
+      <div class="dashboard-title">Report di volo</div>
+      <p>Inserisci i dati e premi “Analizza volo”.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Progetto UDA “Ad ali spiegate”</p>
+</footer>
+
+<script src="aereo.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
