@@ -3,7 +3,7 @@ let planePosition = -80;
 
 function muoviAereo() {
   if (plane) {
-    planePosition += 2;
+    planePosition += 1.2;
     plane.style.left = planePosition + "px";
 
     if (planePosition > window.innerWidth) {
